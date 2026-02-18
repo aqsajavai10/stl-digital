@@ -5,8 +5,6 @@ import { Line } from 'react-chartjs-2';
 import ShowChartRoundedIcon from '@mui/icons-material/ShowChartRounded';
 import BlurOnIcon from '@mui/icons-material/BlurOn';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
-// import PowerInputIcon from '@mui/icons-material/PowerInput';
-// import $ from "jquery";
 import {Chart as ChartJs, LineElement, CategoryScale, LinearScale, PointElement} from 'chart.js/auto';
 ChartJs.register(
     LineElement,
@@ -35,7 +33,6 @@ export const TStatusPage = ()=>{
             const data = await response.json()
             if(!response.ok){
                 console.log({"error":data.detail})
-                // console.log(localStorage.getItem("studentToken"))
             }
             else{
                 settdata(data)
@@ -44,13 +41,13 @@ export const TStatusPage = ()=>{
                 settdatavalues(data["teachsalary"].map((e)=>{
                     return(
                         e["total_salary"]
-
                     )
                 }))
                 setnoofmsalary(data["teachsalary"].length)
             }
         }
         fetchtUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ttoken])
     
     const lineData = {
@@ -84,16 +81,10 @@ export const TStatusPage = ()=>{
                 grid:{
                     display:false
                 },
-                // min: 2,
-                // max: 10,
                 ticks: {
-                    // stepSize: 2,
                     callback: (value)=> value,
                     color:'',
                 }, 
-                // grid:{
-                //     borderDash: [10]
-                // }
             }
         },
     }
@@ -166,9 +157,6 @@ export const TStatusPage = ()=>{
                                         options = {options}
                                         height={200}
                                         width={700}
-                                        // options={{
-                                        //     maintainAspectRatio:false
-                                        // }}
                                     />  
                                     </div>
                                     </div>
@@ -184,7 +172,6 @@ export const TStatusPage = ()=>{
                                         Events<span style={{marginLeft:"125px"}}><BlurOnIcon/></span>
                                     </div>
                                     
-                                        
                                         {/* corousel */}
                                         <div id="carouselExample" className="carousel slide m-1">
                                                 <div className="carousel-inner">
@@ -209,7 +196,7 @@ export const TStatusPage = ()=>{
                                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                                     <span className="visually-hidden">Next</span>
                                                 </button>
-                            
+                        
                                         {/* corousel */}
 
                                     </div>
