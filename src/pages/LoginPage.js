@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { UserContext } from '../context/UserContext';
 import { AnimatedPage } from './AnimatedPage';
 import { ErrorMsg } from './ErrorMsgPage';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../index.css';
 import axios from 'axios';
 

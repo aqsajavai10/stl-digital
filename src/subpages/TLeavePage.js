@@ -25,7 +25,7 @@ const style = {
 
 export const TLeavePage = ()=>{
     const [itldata, setitldata] = useState([])
-    const [ttoken,settoken] = useState(localStorage.getItem("teacherToken"))
+    const [ttoken] = useState(localStorage.getItem("teacherToken"))
     const [tleaveid, settleaveid] = useState("")
     const [treason,settreason] = useState("")
     const [tnoofdays,settnoofdays] = useState("")

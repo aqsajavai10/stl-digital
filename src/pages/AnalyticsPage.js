@@ -18,7 +18,7 @@ ChartJs.register(
 
 export const AnalyticsPage = ()=>{
     const [token] = useContext(UserContext)
-    const [data, setdata] = useState({})
+    const [setdata] = useState({})
     const[days,setdays]=useState(0)
     const[grade,setgrade]=useState("")
     const[leave,setleave]=useState(0)

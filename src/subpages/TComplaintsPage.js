@@ -25,7 +25,7 @@ const style = {
 
 export const TComplaintsPage = ()=>{
     const [itdata, setitdata] = useState([])
-    const [ttoken,settoken] = useState(localStorage.getItem("teacherToken"))
+    const [ttoken] = useState(localStorage.getItem("teacherToken"))
     const [tissueid, settissueid] = useState("")
     const [tissue,settissue] = useState("")
     const [ttype,setttype] = useState("")
