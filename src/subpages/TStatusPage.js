@@ -16,12 +16,12 @@ ChartJs.register(
 )
 
 export const TStatusPage = ()=>{
-    const [tdata, settdata] = useState({})
+    const [settdata] = useState({})
     const[tdays,settdays]=useState(0)
     const[tleave,settleave]=useState(0)
     const [noofmsalary, setnoofmsalary] = useState()
     const[tdatavalues,settdatavalues] = useState([])
-    const [ttoken, settoken] = useState(localStorage.getItem("teacherToken"))
+    const [ttoken] = useState(localStorage.getItem("teacherToken"))
     useEffect(()=>{
         const fetchtUser = async()=>{
             const requestOptions = {

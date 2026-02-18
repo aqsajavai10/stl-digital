@@ -18,7 +18,6 @@ ChartJs.register(
 
 export const AnalyticsPage = ()=>{
     const [token] = useContext(UserContext)
-    const [setdata] = useState({})
     const[days,setdays]=useState(0)
     const[grade,setgrade]=useState("")
     const[leave,setleave]=useState(0)
@@ -39,7 +38,6 @@ export const AnalyticsPage = ()=>{
                 console.log(localStorage.getItem("studentToken"))
             }
             else{
-                setdata(data)
                 setdays(data["stuattendence"].length)
                 setgrade(data["sturesults"][0]["grade"])
                 setleave(data["stuleaves"].length)
